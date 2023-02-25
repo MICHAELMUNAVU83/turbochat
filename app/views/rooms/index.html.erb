@@ -1,27 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<%# <p style="color: green"><%= notice %></p>
 
-<h1>Rooms</h1>
-
-<div id="rooms">
-  <% @rooms.each do |room| %>
-    <%= render room %>
-    <p>
-      <%= link_to "Show this room", room %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New room", new_room_path %>
 
 
 <div class="container">
    <h3><%= current_user.email%> </h3>
-   <h4>Users </h4>
+   <h4 class="font-bold">Users </h4>
 
-   <% render @users %>
+   <%= render @users %>
 
-    <h4>Rooms </h4>
+    <h4 class="font-bold">Rooms </h4>
 
-    <% render @rooms %>
+    <%= render @rooms %>
 
 </div>
