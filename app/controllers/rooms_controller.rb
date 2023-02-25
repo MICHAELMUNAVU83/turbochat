@@ -3,7 +3,8 @@ class RoomsController < ApplicationController
 
   # GET /rooms or /rooms.json
   def index
-    @rooms = Room.all
+    @rooms = Room.public_rooms
+    @users = User.all_except(current_user)
   end
 
   # GET /rooms/1 or /rooms/1.json
